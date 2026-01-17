@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ถามจริงๆเถอะ</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffeef8;
+            padding-top: 100px;
+        }
+        
+        h1 {
+            color: #cd96ac;
+        }
+        
+        .btn-group {
+            position: relative;
+            height: 300px;
+        }
+        
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 20px;
+            border: none;
+            transition: 0.2s;
+        }
+        
+        #yesBtn {
+            background-color: #c298a8;
+            color: white;
+        }
+        
+        #noBtn {
+            background-color: #ccc;
+            color: #333;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>คิดถึงป่าววววววว? 💖</h1>
+
+    <div class="btn-group">
+        <button id="yesBtn" onclick="alert('งั้นก็ขอ5บาททท🥰')">คิดถึงที่สุด</button>
+        <button id="noBtn" onmouseover="moveButton()">ไม่คิดถึงเลย</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            // สุ่มตำแหน่งใหม่ (คล้ายๆ random.randint ใน Python)
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+    </script>
+</body>
+
+</html>
